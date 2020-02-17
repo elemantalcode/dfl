@@ -10,7 +10,7 @@ yum -y install python3-3.6.8 git cuda-toolkit-10-0.x86_64 ffmpeg ffmpeg-devel li
 yum -y install kernel-devel make cuda-libraries-10-0.x86_64 nvidia-driver-cuda.x86_64 nvidia-driver-cuda-libs.x86_64
 
 cd ~ && git clone https://github.com/iperov/DeepFaceLab.git
-sed -i -e 's/aac/bfdk_aac/g' ~/DeepFaceLab/mainscripts/VideoEd.py
+sed -i -e 's/aac/libfdk_aac/g' ~/DeepFaceLab/mainscripts/VideoEd.py
 cd ~ && git clone https://github.com/elemantalcode/dfl.git
 
 cd ~/DeepFaceLab && cp -advpR ../dfl/scripts .

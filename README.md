@@ -26,7 +26,7 @@ yum -y install /root/libcudnn7-7.6.5.32-1.cuda10.0.x86_64.rpm
 ### Patching FFMpeg
 The version of FFmpeg for this install has the `aac` codec as experimental, which breaks on audio conversions `8_merged_to_mp4.sh`. To fix, run:
 ```bash
-sed -i -e 's/aac/bfdk_aac/g' ~/DeepFaceLab/mainscripts/VideoEd.py
+sed -i -e 's/aac/libfdk_aac/g' ~/DeepFaceLab/mainscripts/VideoEd.py
 ```
 
 **note:** The above patch is included in the scripted method
